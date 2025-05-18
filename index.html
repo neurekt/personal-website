@@ -9,152 +9,93 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            background-color: #0a0f1b;
-            color: #e0e5ec;
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
+    body {
+        background-color: #0d1117;
+        color: #c9d1d9;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
 
-        body::before, body::after {
-            content: '';
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: linear-gradient(145deg, #58a6ff, transparent);
-            border-radius: 50%;
-            animation: float 3s ease-in-out infinite;
-            z-index: 0;
-        }
+    .container {
+        text-align: center;
+        padding: 2rem;
+        background-color: #161b22;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
+        max-width: 90%;
+        width: 400px;
+    }
 
-        body::before {
-            top: -50px;
-            left: -50px;
-        }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        background: url('./profile.png') center center / cover no-repeat;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
 
-        body::after {
-            bottom: -50px;
-            right: -50px;
-        }
+    .name {
+        font-weight: 700;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(20px);
-            }
-        }
+    .description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        color: #8b949e;
+    }
 
-        @keyframes color-wave {
-            0% {
-                color: #58a6ff;
-            }
-            25% {
-                color: #ff7eb3;
-            }
-            50% {
-                color: #7eafff;
-            }
-            75% {
-                color: #ffcb7e;
-            }
-            100% {
-                color: #58a6ff;
-            }
-        }
+    .socials {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+    }
 
-        .container {
-            position: relative;
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(145deg, #0d1627, #080d16);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-            border-radius: 20px;
-            max-width: 90%;
-            width: 400px;
-            z-index: 1;
-        }
+    .socials a {
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: #c9d1d9;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
 
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            background: url('./profile.png') 40% 0% / 140% no-repeat;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
+    .socials a:hover {
+        transform: scale(1.15);
+        color: #58a6ff;
+    }
 
+    @media (max-width: 600px) {
         .name {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-            animation: color-wave 4s infinite;
-            z-index: 2;
-            position: relative;
+            font-size: 1.8rem;
         }
 
         .description {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            color: #e0e5ec;
-            z-index: 2;
-            position: relative;
-        }
-
-        .socials {
-            display: flex;
-            justify-content: space-around;
-            gap: 1rem;
-            z-index: 2;
-            position: relative;
+            font-size: 0.95rem;
         }
 
         .socials a {
-            text-decoration: none;
-            font-size: 2rem;
-            color: #e0e5ec;
-            transition: transform 0.3s ease;
+            font-size: 1.5rem;
         }
 
-        .socials a:hover {
-            transform: scale(1.2);
-            color: #58a6ff;
+        .profile-pic {
+            width: 80px;
+            height: 80px;
         }
+    }
+</style>
 
-        @media (max-width: 600px) {
-            .name {
-                font-size: 2rem;
-            }
-
-            .description {
-                font-size: 1rem;
-            }
-
-            .socials a {
-                font-size: 1.5rem;
-            }
-
-            .profile-pic {
-                width: 80px;
-                height: 80px;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -164,6 +105,9 @@
         <div class="socials">
             <a href="https://github.com/gscarozza/" target="_blank" aria-label="GitHub">
                 <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.instagram.com/gscarozza" target="_blank" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
             </a>
             <a href="https://www.youtube.com/@gscarozza" target="_blank" aria-label="YouTube">
                 <i class="bi bi-youtube"></i>
